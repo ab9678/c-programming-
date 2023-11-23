@@ -13,5 +13,5 @@ p=fopen("/home/abhigyan/Documents/abc.txt","w");
 fputs(content,p);
 
 fclose(p);
-
+printf("Done!");
 }
