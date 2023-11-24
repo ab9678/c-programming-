@@ -14,4 +14,5 @@ fputs(content,p);
 
 fclose(p);
 printf("Done!");
+printf("your file is ready\n");
 }
