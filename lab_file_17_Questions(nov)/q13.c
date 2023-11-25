@@ -1,5 +1,5 @@
 /*
-Q-ACCEPT TWO INTEGERS AND DETERMINE THE LARGEST AMONG THEM.
+Q- input marks of n students and find out the largest among them.
 ALGORITHM:--
 1 start
 2 take two functions highestmarks() and main()
