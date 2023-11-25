@@ -3,7 +3,7 @@
 int a[3][3],i,j,sumrow,sumcolumn;
 void column(){
 for(j=0;j<3;j++){
-    sumcolumn=1;{
+    sumcolumn=0;{
         for(i=0;i<3;i++){
             sumcolumn=sumcolumn+a[i][j];
             
@@ -19,7 +19,7 @@ for(j=0;j<3;j++){
 void row(){
 
 for(i=0;i<3;i++){
-    sumrow=1;{
+    sumrow=0;{
         for(j=0;j<3;j++){
             sumrow=sumrow+a[i][j];
             
