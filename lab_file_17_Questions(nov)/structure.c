@@ -1,3 +1,8 @@
+//input name roll and marks in 3 sub for each student and calculate total and average of each.
+//also print the highest marks among all the students and the name of the topper
+
+
+
 #include<stdio.h>
 struct student //Declaring
 {
@@ -65,5 +70,16 @@ for(i=0;i<2;i++){
     
     printf("\n\n\n");
 }
+int index;
+int largest=s[0].marks[0];
+for(i=0;i<2;i++){
+    for(j=0;j<3;j++){
+        if(s[i].marks[j]>largest){
+            largest = s[i].marks[j];
+            index=i;
+        }
+    }
+}
+printf("student with highest marks is %s and his marks is %d",s[index].name,largest);
 
 }
