@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int fact(int n){
-
+int factorial;
 
 if(n == 0){
     return 1;
@@ -10,7 +10,7 @@ if(n == 0){
 
 
 
-int factorial = n * fact(n-1);
+factorial = n * fact(n-1);
 return factorial;
 
 
