@@ -1,7 +1,7 @@
 #include<stdio.h>
+//declaring functions 
 
 void a2b(int a , int b);
-
 void b2a(int a, int b);
 
 int main(){
@@ -30,6 +30,8 @@ int *q=&b;
 printf("%d",a);
 
 }
+
+//fucntion definition
 void b2a(int a , int b){
     int *p=&a;
     int *q=&b;

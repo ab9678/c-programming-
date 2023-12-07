@@ -20,9 +20,11 @@ int main(){
 int i,pos;
 
 
+printf("Enter string\n");
 
 fgets(string,sizeof(string),stdin);
 
+puts("Your string is");
 puts(string);
 
 char s;
