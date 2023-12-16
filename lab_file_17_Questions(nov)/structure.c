@@ -14,14 +14,18 @@ struct student //Declaring
 
 int main(){
 
+int numOfStudents;
+printf("How many students?\n");
+scanf("%d",&numOfStudents);
+
 int i,j,highest;
 int sum;
 float avg;
-struct student s[2];//assign 2 student to structure
+struct student s[numOfStudents];//assign numOfStudents student to structure
 
 printf("Enter details\n");
 
-for(i=0;i<2;i++){
+for(i=0;i<numOfStudents;i++){
     printf("\nEnter the details of student %d\n",i+1);
 
     printf("\nRoll number: ");
@@ -40,7 +44,7 @@ for(i=0;i<2;i++){
 printf("\n___________________________________________________________________________________________________\n\n");
 
 printf("YOUR STRUCTURE IS READY\n");
-for(i=0;i<2;i++){
+for(i=0;i<numOfStudents;i++){
 
     sum=0;
     printf("\n\nRoll:\t %d",s[i].roll);
@@ -56,8 +60,11 @@ for(i=0;i<2;i++){
     printf("\n");
 
     highest=s[i].marks[0];
-    for(j=0;j<3;j++){
-        if(s[i].marks[j]>highest){
+    for(j=0;j<3;j++) 
+    {
+        if(s[i].marks[j]>highest)
+        
+        {
             highest=s[i].marks[j];
         }
     }
@@ -72,7 +79,7 @@ for(i=0;i<2;i++){
 }
 int index;
 int largest=s[0].marks[0];
-for(i=0;i<2;i++){
+for(i=0;i<numOfStudents;i++){
     for(j=0;j<3;j++){
         if(s[i].marks[j]>largest){
             largest = s[i].marks[j];

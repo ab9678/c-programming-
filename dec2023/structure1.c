@@ -6,7 +6,6 @@ struct employee
     int empId;
     char name[20];
     int baseSalary;
-
     int grsSalary;
 
 };
