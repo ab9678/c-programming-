@@ -1,25 +1,4 @@
-/*#include<stdio.h>
-void swapawb(int *p, int *q){
 
-*p=*q]uj;
-
-
-}
-int main(){
-    
-    int a=10;
-    int b=20;
-
-    int *p=&a;
-    int *q=&b;
-    
-    //*p=*q;
-
-    swapawb(&a,&b);
-    printf("%d %d",a,b);
-    
-    
-*/
 
 #include<stdio.h>
 
