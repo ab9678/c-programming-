@@ -246,6 +246,7 @@ if(operation==1){
 }else if(operation == 2){
     printf("\n\nYou Have Chosen Matrix\n");
     returnedValue=matrix();
+    
 
 }
 
