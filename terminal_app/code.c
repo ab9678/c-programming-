@@ -98,7 +98,7 @@ int sum;
 char operation;
 int insideOperation;
 
-printf("\n\nSpecify arithmetic operation for you array ('+' , '-' , '/' , '*')\nInput: ");
+printf("\n\nSpecify arithmetic operation for you array ('+' , '-' , '*')\nInput: ");
 scanf(" %c",&operation);
 
 //ADDITION PART
@@ -138,10 +138,13 @@ if(operation == '+'){
 //SUBTRACTION PART
 
 }else if (operation == '-'){
+    if(numOfArray>1){
     printf("Do yo want \n(1)Difference of corresponding elements or \n(2)All elements of the arrays"); // I have lets say 3 array so for sum of elements i need is for loop , essesntially it is sumrow of all indivisual rows;
     
     scanf("%d",&insideOperation);
-
+    }else{
+        insideOperation = 2;
+    }
 
     if(insideOperation == 1){
 
@@ -174,9 +177,12 @@ if(operation == '+'){
 //MULTIPLICATION PART
 }else if (operation == '*'){
     int operation1;
+    if(numOfArray>1){
     printf("Specify what type:-\n1)Elements of the array\n2)Corresponding elements of the arrays\nInput: ");
     scanf("%d",&operation1);
-
+    }else{
+        operation1 = 1;
+    }
     if(operation1 == 1){
         int productRow;
         //Elements of array
@@ -297,6 +303,9 @@ printf("\n----------------------------------------------------------------------
             }
 
 
+        }else{
+            printf("\n\nInvalid Input\n");
+            return 1;
         }
 
 
