@@ -1,6 +1,32 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+
+void asciiHello(){
+    printf("\n\n");
+    printf(" ## ##              ##     ### ##   ### ##   \n");
+    printf("##   ##              ##     ##  ##   ##  ##  \n");
+    printf("##                 ## ##    ##  ##   ##  ##  \n");
+    printf("##                 ##  ##   ##  ##   ##  ##  \n");
+    printf("##                 ## ###   ## ##    ## ##   \n");
+    printf("##   ##            ##  ##   ##       ##      \n");
+    printf(" ## ##            ###  ##  ####     ####     \n");
+    printf("\n\n");
+}
+
+void asciiThankYou(){
+    printf("\n\n");
+    printf("                                                                                                 \n");
+    printf("                                                                                                 \n");
+    printf(" /__  ___/                                              \\    / /                               // \n");
+    printf("   / /        / __        ___         __       / ___     \\  / /      ___                      //  \n");
+    printf("  / /        //   ) )   //   ) )   //   ) )   //\\ \\       \\/ /     //   ) )    //   / /       //   \n");
+    printf(" / /        //   / /   //   / /   //   / /   //  \\ \\       / /     //   / /   //   / /           \n");
+    printf("/ /        //   / /   ((___( (   //   / /   //    \\ \\     / /     ((___/ /   ((___( (       ##     \n");
+    printf("\n\n");
+
+}
+
 /*
 1. Array
     1. addition of its elements
@@ -42,15 +68,16 @@ int array(int size){
 
 //int returnedValue;
 
-int i,j,product,diff;
+int i,j,product,diff;    
+    
 int numOfArray;
 
-printf("Enter how many array do you need\n");
+printf("Enter how many array do you need: ");
 scanf("%d",&numOfArray);
 
 int array[numOfArray][size];
 
-printf("Enter the elements\n");
+printf("\n\nPlease Enter the Elements:-\n");
 for(i=0;i<numOfArray;i++){
     printf("Enter Array %d\n",i+1);
     for(j=0;j<size;j++){
@@ -60,7 +87,7 @@ for(i=0;i<numOfArray;i++){
 }
 
 for(i=0;i<numOfArray;i++){
-    printf("\n\nArray %d\n",i+1);
+    printf("\n\nArray %d:-\n\n",i+1);
     for(j=0;j<size;j++){
         printf("%d\t",array[i][j]);
     }
@@ -71,15 +98,17 @@ int sum;
 char operation;
 int insideOperation;
 
-printf("\n\nSpecify arithmetic operation for you array ('+' , '-' , '/' , '*')");
+printf("\n\nSpecify arithmetic operation for you array ('+' , '-' , '/' , '*')\nInput: ");
 scanf(" %c",&operation);
 
 //ADDITION PART
 if(operation == '+'){
-    
-    printf("Do yo want \n(1)sum of corresponding elements or \n(2)All elements of the arrays"); // I have lets say 3 array so for sum of elements i need is for loop , essesntially it is sumrow of all indivisual rows;   
+    if(numOfArray > 1){
+    printf("\nDo yo want \n(1)sum of corresponding elements or \n(2)All elements of the arrays"); // I have lets say 3 array so for sum of elements i need is for loop , essesntially it is sumrow of all indivisual rows;   
     scanf("%d",&insideOperation);
-
+    }else{
+        insideOperation = 2;
+    }
 
     if(insideOperation == 1){
 
@@ -190,7 +219,7 @@ if(operation == '+'){
 
 
 int matrix(){
-
+//Matrix calculator
 int rowSize,columnSize;
 printf("\nEnter Row size of matrix\nInput: ");
 scanf("%d",&rowSize);
@@ -198,21 +227,207 @@ printf("\nEnter Column Size of the matrix\nInput: ");
 scanf("%d",&columnSize);
 
 int a[rowSize][columnSize],i,j;
+int b[rowSize][columnSize];
+int typeOfOperation;
 
-int operation;
+printf("Specify the Kind of Matrix operation\n(1)Matrix manipulation\n(2)Arithmetic calculation\nInput(1/2): ");
+scanf("%d",&typeOfOperation);
+if(typeOfOperation == 1){
+
+// This is type 1 i.e., matrix manipulation
+printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+
+    printf("Option 1- MATRIX MANIPULATION IS SELECTED\n\n");
+
+printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+
+    printf("\nEnter the matrix:-\n");
+    for(i=0;i<rowSize;i++){
+        printf("Row %d\n",i+1);
+        for(j=0;j<columnSize;j++){
+            scanf("%d",&a[i][j]);
+        }
+
+    }
+    int insideType1;
+    printf("Please select any one of the following:-\n(1)Transpose\n(2)Square of a matrix\nInput: ");
+    scanf("%d",&insideType1);
+        //do square and transpose ##
+        if(insideType1 == 1){
+
+    printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+            printf("You have selected Transpose of a matrix\n");
+    printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+            printf("Original matrix is \n");
+
+            for(i=0;i<rowSize;i++){
+                for(j=0;j<columnSize;j++){
+                    printf("%d\t",a[i][j]);
+                }
+                printf("\n");
+            }
+            printf("Transpose of the matrix is \n");
+
+            for(i=0;i<columnSize;i++){
+                for(j=0;j<rowSize;j++){
+                    printf("%d\t",a[j][i]);
+                }
+                printf("\n");
+            }
 
 
+        }else if(insideType1 == 2){
+            printf("Original matrix is \n");
+
+            for(i=0;i<rowSize;i++){
+                for(j=0;j<columnSize;j++){
+                    printf("%d\t",a[i][j]);
+                }
+                printf("\n");
+            }
+
+            printf("\nSquare of the Matrix is\n");
+
+            for(i=0;i<rowSize;i++){
+                for(j=0;j<columnSize;j++){
+                    int result = a[i][j] * a[i][j];
+                    printf("%d\t",result);
+                }
+                printf("\n");
+            }
+
+
+        }
+
+
+
+
+
+    // ##   
+
+
+}else{          // if 2 is selected we will have matrix calculator 
+
+// This is type 2 i.e, Arithmetic opearation
+printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("Option 2- ARITHMETIC CALCULATION IS SELECTED \n\n");
+    printf("!!PLEASE NOTE MULTIPLICATION IS AVAILABLE ONLY FOR SQUARE MATRICES!!\n");
+printf("----------------------------------------------------------------------------------------------------------------------\n\n");
+
+
+printf("\nEnter the first matrix:-\n");
+for(i=0;i<rowSize;i++){
+    printf("Row %d\n",i+1);
+    for(j=0;j<columnSize;j++){
+        scanf("%d",&a[i][j]);
+    }
+}
+printf("\nEnter the second matrix:-\n");
+for(i=0;i<rowSize;i++){
+    printf("Row %d\n",i+1);
+    for(j=0;j<columnSize;j++){
+        scanf("%d",&b[i][j]);
+    }
 }
 
+printf("Your Matrices are:-\n");
+for(i=0;i<rowSize;i++){
+    for(j=0;j<columnSize;j++){
+        printf("%d\t",a[i][j]);
+    }
+    printf("\n");
+}
+printf("\nAND\n\n");
 
+for(i=0;i<rowSize;i++){
+    for(j=0;j<columnSize;j++){
+        printf("%d\t",b[i][j]);
+    }
+    printf("\n");
+}
+
+char insideType2;
+printf("\nPlease select one of the following \n\n' + '  ,  ' - '  ,  ' * '\nInput: ");
+scanf(" %c",&insideType2);
+
+if(insideType2 == '+'){
+printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("\t\tADDITION OF MATRICES\t\t");
+printf("\n\n----------------------------------------------------------------------------------------------------------------------\n\n");
+
+    int sum=0;
+    printf("\n\nRESULTANT MATRIX:-\n\n");
+    for(i=0;i<rowSize;i++){
+        for(j=0;j<columnSize;j++){
+            sum=a[i][j] + b[i][j];
+            printf("%d\t",sum);
+        }
+        printf("\n");
+    }
+}else if(insideType2 == '-'){
+printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("\t\tDIFFERENCE OF MATRICES\t\t");
+printf("\n\n----------------------------------------------------------------------------------------------------------------------\n\n");
+    int diff=0;
+    printf("\n\nRESULTANT MATRIX:-\n\n");
+    for(i=0;i<rowSize;i++){
+        for(j=0;j<columnSize;j++){
+            if(a[i][j]>b[i][j]){
+                diff = a[i][j] - b[i][j];
+            }else{
+                diff = b[i][j] - a[i][j];
+            }
+            printf("%d\t",diff);
+        }
+        printf("\n");
+    }
+}else if(insideType2 == '*'){
+printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("\t\tMULTIPLICATION OF MATRICES\t\t");
+printf("\n\n----------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("\n\n!!PLEASE NOTE MULTIPLICATION IS AVAILABLE ONLY FOR SQUARE MATRICES!!\n\n");
+    int r[rowSize][columnSize];
+    if(rowSize==columnSize){    //multiplication if 
+    for(i=0;i<rowSize;i++){
+    for(j=0;j<columnSize;j++){
+
+        r[i][j]=0;
+
+        for(int k=0;k<rowSize;k++){
+            r[i][j]=r[i][j]+a[i][k]*b[k][j];
+        }
+    }
+    }
+    for(i=0;i<rowSize;i++){
+        for(j=0;j<columnSize;j++){
+            printf("%d\t",r[i][j]);
+        }
+        printf("\n");
+    }                            //end of multiplication if
+
+    }else{
+        printf("\nThe matrix is not a square matrix\n");
+
+    }                            //end of multiplication else
+
+}else{//end of __else if (insideType2=='*')__
+    printf("\nNone of the Arithmatic opeartor selected/Invalid input\n");
+    return 1;
+}
+
+}//end of else if 2 is selected line:265
+
+}//Matrix() close
 
 //Main Function
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main(){
+asciiHello();
+
 
 int operation;
 
-printf("Specify the operation to be performed (Enter the corresponding number)\n\n1. Array \n2. Matrix \n3. Integers \n4. File Handling \n5. Structure \n6. Special series ");
+printf("Specify the operation to be performed (Enter the corresponding number)\n\n1. Array \n2. Matrix \n3. Integers \n4. File Handling \n5. Structure \n6. Special series\nInput:  ");
 scanf("%d",&operation);
 
 int returnedValue;
@@ -221,6 +436,10 @@ char yesORno;
 // ARRAY PART {Start}
 if(operation==1){
     int arrSize;
+    printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("You have chosen Array");
+    printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+
     printf("Enter the size of your array:\t");
     scanf("%d",&arrSize);
     returnedValue=array(arrSize);
@@ -230,7 +449,7 @@ if(operation==1){
         if(yesORno == 'y'){
             array(arrSize);
         }else{
-            printf("\nThank You! , Have a good day !\n\n");
+            printf("\n\nThank You!\n\n");
         }
         
     }else{//To be able to run array again
@@ -239,18 +458,61 @@ if(operation==1){
         if(yesORno=='y'){
             array(arrSize);
         }else{
-            printf("\nThank You! , Have a good day !\n\n");
+            printf("\n\nThank You!\n\n");
         }
     }
     // ARRAY PART {End}
+
+
+
+
+
+
+
+
+// MATRIX START
 }else if(operation == 2){
-    printf("\n\nYou Have Chosen Matrix\n");
+    printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+
+    printf("You Have Chosen Matrix");
+    printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
+
     returnedValue=matrix();
+
+
+    if(returnedValue == 1){
+        printf("\nDo You want to try Again?(y/n)\n");
+        scanf(" %c",&yesORno);
+        if(yesORno == 'y'){
+            matrix();
+        }else{
+            printf("\n\nThank you!\n\n");
+        }
+    }else{
+        printf("\nOnce More(y/n)?\n");
+        scanf(" %c",&yesORno);
+        if(yesORno == 'y'){
+            matrix();
+        }else{
+            printf("\n\nThank you!\n\n");
+        }
+
+    }
     
 
+
+
+
+//MATRIX END
 }
 
 
+
+
+
+    
+
+asciiThankYou();
 
 //Main Function End
 }
