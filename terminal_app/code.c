@@ -14,6 +14,7 @@ void asciiHello(){
     printf("\n\n");
 }
 
+
 void asciiThankYou(){
     printf("\n\n");
     printf("                                                                                                 \n");
@@ -26,6 +27,7 @@ void asciiThankYou(){
     printf("\n\n");
 
 }
+
 
 /*
 1. Array
@@ -63,7 +65,7 @@ void asciiThankYou(){
     5. product of numbers till n (declare long integer here)
 */
 
-//ARRAY FUNCTION START
+
 int array(int size){
 
 //int returnedValue;
@@ -221,7 +223,6 @@ if(operation == '+'){
 
 //END OF ARRAY FUNCTION
 }
-//___________________________________________________________________________________________________________________________
 
 
 int matrix(){
@@ -428,7 +429,15 @@ printf("\n\n--------------------------------------------------------------------
 
 }//Matrix() close
 
-//Main Function
+
+int integer(){
+
+float num;
+
+
+}
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main(){
 asciiHello();
@@ -474,11 +483,6 @@ if(operation==1){
 
 
 
-
-
-
-
-
 // MATRIX START
 }else if(operation == 2){
     printf("\n----------------------------------------------------------------------------------------------------------------------\n\n");
@@ -513,7 +517,17 @@ if(operation==1){
 
 
 //MATRIX END
-}
+}else if(operation = 3){
+//INTEGER START
+printf("\n------------------------------------------------------------------------------------------------------\n");
+    printf("You have selected Integers");
+printf("\n------------------------------------------------------------------------------------------------------\n");
+    returnedValue=integer();
+
+
+
+
+}//INTEGER END 
 
 
 
