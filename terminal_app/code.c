@@ -512,9 +512,9 @@ asciiHello();
 printf("\e[0m");
 
 int operation;
-printf("\e[0;94m");
-printf("Specify the operation to be performed (Enter the corresponding number)\n\n1. Array \n2. Matrix \n3. Integers \n4. File Handling \n5. Structure \n6. Special series\nInput:  ");
-printf("\e[0m");
+
+printf(CYN"Specify the operation to be performed (Enter the corresponding number)\n\n1. Array \n2. Matrix \n3. Integers \n4. File Handling \n5. Structure \n6. Special series\nInput:  "RESET);
+
 scanf("%d",&operation);
 
 int returnedValue;
