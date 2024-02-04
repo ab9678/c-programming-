@@ -10,6 +10,7 @@ scanf("%d",&n);
 
 int flag=0;
 int i;
+
 if(i<2){
     flag=1;
 }
